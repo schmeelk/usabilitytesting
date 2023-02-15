@@ -32,7 +32,9 @@
 
 
 
-<!-- Main content -->
+<!-- Main content 
+https://developers.google.com/recaptcha/docs/v3
+-->
 <div class="box">
 
 reCAPTCHA v3
@@ -40,6 +42,18 @@ reCAPTCHA v3
   
 </div>
 
+<script src="https://www.google.com/recaptcha/api.js?render=6LdNF4UkAAAAAAmwGg6_qVT-6f7V081LyVDAZ_FU"></script>
+
+ <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+  </script>
 
 
 
