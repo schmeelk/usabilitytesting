@@ -33,6 +33,9 @@
 
 
 <!-- Main content -->
+<!-- https://developers.google.com/recaptcha/docs/invisible -->
+<!-- https://developers.google.com/recaptcha/docs/verify -->
+
 <div class="box">
 
 reCAPTCHA v2
@@ -60,6 +63,34 @@ Invisible reCAPTCHA badge
 
 
 
+
+<!-- Explicit rendering after an onload callback -->
+
+<html>
+  <head>
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    <script>
+        var onSubmit = function(token) {
+          console.log('success!');
+        };
+
+        var onloadCallback = function() {
+          grecaptcha.render('submit', {
+            'sitekey' : '6LcY0oQkAAAAAGUKVvxt6geq7w11-u-Hf11SOnQb',
+            'callback' : onSubmit
+          });
+        };
+    </script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <input id="submit" type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+  </body>
+</html>
 
 
 <!-- &hellip; gives you ... -->
