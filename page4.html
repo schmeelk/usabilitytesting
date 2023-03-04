@@ -43,19 +43,27 @@ reCAPTCHA v3
 </div>
 
 <html>
+  <head>
 <script src="https://www.google.com/recaptcha/api.js?render=6LdNF4UkAAAAAAmwGg6_qVT-6f7V081LyVDAZ_FU"></script>
-
+  </head>
+  
+    <body>
+	
+	<button onclick="onClick()"> Submit </button>
+	
  <script>
       function onClick(e) {
         e.preventDefault();
         grecaptcha.ready(function() {
           grecaptcha.execute('6LdNF4UkAAAAAAmwGg6_qVT-6f7V081LyVDAZ_FU', {action: 'submit'}).then(function(token) {
               // Add your logic to submit to your backend server here.
+			  console.log(token);
 			  console.log('success page4!');
           });
         });
       }
   </script>
+    <body>
 </html>
 
 
