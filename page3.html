@@ -47,7 +47,7 @@ reCAPTCH with verify
 
 if(!empty($_REQUEST))
 {
-      //  echo '<pre>'; print_r($_REQUEST); die('END');
+        echo '<pre>'; print_r($_REQUEST); die('END');
         $post = [
             'secret' => 'Your Secret key',
             'response' => $_REQUEST['g-recaptcha-response'],
