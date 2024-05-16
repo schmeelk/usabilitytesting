@@ -68,15 +68,18 @@ Table:-->
     <td>
 	
 	<script>
-            image_array = [
-                'bird.jpg',
-                'cat.jpg',
-                'fireworks.jpg']
 
-            function get_random_image(){
-                random_index = Math.floor(Math.random() * image_array.lenght);
-                selected_image = image_array[random_index]
-                document.getElementById('image_shower').src = './media/captcha-images/public-domain-www.publicdomainpictures.net/$selected_image}'}
+			const image_array = [
+			   'bird.jpg',
+                'cat.jpg',
+                'fireworks.jpg'
+			];
+
+			function get_random_image() {
+			  const random_index = Math.floor(Math.random() * image_array.length);
+			  const selected_image = image_array[random_index];
+			  document.getElementById('image_shower').src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
+			}
 
         </script>
 	
