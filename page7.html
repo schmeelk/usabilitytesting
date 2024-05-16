@@ -65,7 +65,23 @@ Table:-->
 
 <table>
   <tr>
-    <td>Random Image 1</td>
+    <td>
+	
+	<script>
+            image_array = [
+                'bird.jpg',
+                'cat.jpg',
+                'fireworks.jpg']
+
+            function get_random_image(){
+                random_index = Math.floor(Math.random() * image_array.lenght);
+                selected_image = image_array[random_index]
+                document.getElementById('image_shower').src = './media/captcha-images/public-domain-www.publicdomainpictures.net/$selected_image}'}
+
+        </script>
+	
+	
+	</td>
     <td> <button>Button Play Sound</button></td>
   </tr>
   <tr>
