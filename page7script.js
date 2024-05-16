@@ -1,5 +1,9 @@
-function onButtonClick() {
-  alert('Button clicked!');
+function onPlaySoundButtonClick() {
+  alert('Button Play Sound clicked!');
+}
+
+function onSubmitButtonClick() {
+  alert('Button Submit clicked!');
 }
 
 const button = document.querySelector('button');
