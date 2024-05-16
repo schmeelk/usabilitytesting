@@ -66,6 +66,7 @@ Table:-->
 			function get_random_image() {
 			  const random_index = Math.floor(Math.random() * image_array.length);
 			  const selected_image = image_array[random_index];
+			  console.log( selected_image )
 			  document.getElementById('image_shower').src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
 			}
 
