@@ -20,7 +20,12 @@
 </ul>
 
 
-
+<script>  
+function favTutorial() {  
+var mylist = document.getElementById("myList");  
+document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;  
+}  
+</script>  
 
 
 <!-- Main content 
@@ -64,7 +69,17 @@ Table:-->
 	</td>
   </tr>
   <tr>
-    <td>Dropdown list of items</td>
+    <td>Dropdown list of items
+	
+		<select id = "myList" onchange = "favTutorial()" >  
+		<option> ---Choose tutorial--- </option>  
+		<option> w3schools </option>  
+		<option> Javatpoint </option>  
+		<option> tutorialspoint </option>  
+		<option> geeksforgeeks </option>  
+		</select>  
+	
+	</td>
     <td> <button onclick="onSubmitButtonClick()">Button Submit</button></td>
   </tr>
 </table> 
