@@ -7,8 +7,6 @@
   <meta name="Keywords" content=""/>
   <meta name="Description" content=""/>
   
-  <script src="./page7script.js"></script>
-	
 </head>
 
 
@@ -20,38 +18,7 @@
 </ul>
 
 
-<script>  
-function favTutorial() {  
-var mylist = document.getElementById("myList");  
-document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;  
-}  
 
-function onPlaySoundButtonClick() {
-  alert('Button Play Sound clicked!');
-}
-
-function onSubmitButtonClick() {
-  alert('Button Submit clicked!');
-}
-
-const button = document.querySelector('button');
-button.addEventListener('click', onButtonClick);
-
-
-window.onload = choosePic;
-
-var myPix = new Array(
-		"bird.jpg",
-        "cat.jpg",
-        "fireworks.jpg"
-		);
-
-function choosePic() {
-     var randomNum = Math.floor(Math.random() * myPix.length);
-	 var selected_image = imyPix[random_index];
-     document.getElementById("myPicture").src =  `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
-	 
-</script>  
 
 
 <!-- Main content 
@@ -142,6 +109,9 @@ Figure 2:
 </table>
 
 </address>
+
+<script src="./page7script.js"></script>
+
 </body>
 </html>
 
