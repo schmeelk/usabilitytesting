@@ -40,6 +40,8 @@ function choosePic() {
 	 selected_image = imyPix[random_index];
      document.getElementById("myPicture").src =  `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
 	 
+};
+	 
 	 
 	 
 const sounds = {
