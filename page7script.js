@@ -11,9 +11,11 @@ function onPlaySoundButtonClick() {
     // ...and play it
     //mySound.play();
 
-	
-	const soundPath = 	`./media/captcha-sounds/${selected_image.replace('.jpg', '.mp3')}`;
+	const soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
 	console.log(soundPath);
+	
+	const audio = new Audio(soundPath);
+	audio.play();
 }
 
 function onSubmitButtonClick() {
