@@ -1,3 +1,4 @@
+
 function onPlaySoundButtonClick() {
   alert('Button Play Sound clicked!');
   solve_start = performance.now();
@@ -18,9 +19,6 @@ function onSubmitButtonClick() {
   //check to see if names of image and sound match at begining
   //log time solve results and date
 }
-
-const button = document.querySelector('button');
-button.addEventListener('click', onButtonClick);
 
 var selected_image = 'cat.jpg'; 
  
@@ -71,4 +69,10 @@ function choosePic() {
 	});
 
 
+  const playButtons = document.querySelector('.play-button');
+  playButtons.addEventListener('click', onPlaySoundButtonClick);
+  
+  const submitButtons = document.querySelector('.submit-button');
+  submitButtons.addEventListener('click', onSubmitButtonClick);
+  
 };
