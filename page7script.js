@@ -24,6 +24,9 @@ function onSubmitButtonClick() {
 
     //check to see if names of image and sound match at begining
     //log time solve results and date
+	//report to screen
+	//send to firebase database: date, time, solve_time, start_time, end_time, imagefile_name, soundfile_name
+	
 }
 
 let selected_image = 'cat.jpg';
@@ -39,39 +42,11 @@ var myPix = new Array(
     "fireworks.jpg"
 );
 
-//const sounds = {
- //         alt: {
- //             url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
- //         },
- //         cat: {
- //             url: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
- //         },
- //       bird: {
- //           url: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
- //       },
- //       fireworks: {
- //           url: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
- //       },
- //       total: {
- //           url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
- //       }
-//};
 
 function choosePic() {
     const randomNum = Math.floor(Math.random() * myPix.length);
     selected_image = myPix[randomNum];
     document.getElementById("myPicture").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
-
-   
-
-    //const membershipEl = document.querySelector("#membership");
-    //const playerEl = document.querySelector("#player");
-
-    //playerEl.src = sounds[membershipEl.value].url;
-    //membershipEl.addEventListener("change", (e) => {
-    //    playerEl.src = sounds[e.target.value].url;
-    // });
-
 
     const playButtons = document.querySelector('.play-button');
     playButtons.addEventListener('click', onPlaySoundButtonClick);
