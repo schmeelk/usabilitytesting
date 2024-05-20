@@ -35,12 +35,8 @@ var myPix = new Array(
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * myPix.length);
-	 selected_image = imyPix[random_index];
+	 selected_image = myPix[random_index];
      document.getElementById("myPicture").src =  `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
-	 
-
-	 
-	 
 	 
 	const sounds = {
 	  alt: {
