@@ -1,5 +1,7 @@
 function onPlaySoundButtonClick() {
   alert('Button Play Sound clicked!');
+  solve_start = performance.now();
+  
 	// create "mySound"...
   var mySound = soundManager.createSound({
 	  url: 'media/captcha-sounds/cat.mp3'
@@ -11,6 +13,10 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
   alert('Button Submit clicked!');
+  solve_end = performance.now();
+  
+  //check to see if names of image and sound match at begining
+  //log time solve results and date
 }
 
 const button = document.querySelector('button');
@@ -19,6 +25,9 @@ button.addEventListener('click', onButtonClick);
 var selected_image = 'cat.jpg'; 
  
 window.onload = choosePic;
+
+var solve_start = -1;
+var solve_end = -1; 
 
 var myPix = new Array(
 		"bird.jpg",
