@@ -55,13 +55,13 @@ function choosePic() {
         }
     };
 
-    const membershipEl = document.querySelector("#membership");
-    const playerEl = document.querySelector("#player");
+    //const membershipEl = document.querySelector("#membership");
+    //const playerEl = document.querySelector("#player");
 
-    playerEl.src = sounds[membershipEl.value].url;
-    membershipEl.addEventListener("change", (e) => {
-        playerEl.src = sounds[e.target.value].url;
-    });
+    //playerEl.src = sounds[membershipEl.value].url;
+    //membershipEl.addEventListener("change", (e) => {
+    //    playerEl.src = sounds[e.target.value].url;
+    // });
 
 
     const playButtons = document.querySelector('.play-button');
