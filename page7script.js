@@ -24,7 +24,7 @@ button.addEventListener('click', onButtonClick);
 
 var selected_image = 'cat.jpg'; 
  
-window.addEventListener(load, choosePic);
+window.addEventListener('load', choosePic);
 
 var solve_start = -1;
 var solve_end = -1; 
