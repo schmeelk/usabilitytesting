@@ -1,6 +1,6 @@
 
 function onPlaySoundButtonClick() {
-    alert('Button Play Sound clicked!');
+    //alert('Button Play Sound clicked!');
     solve_start = performance.now();
 
     //create "mySound"...
@@ -19,7 +19,7 @@ function onPlaySoundButtonClick() {
 }
 
 function onSubmitButtonClick() {
-    alert('Button Submit clicked!');
+    //alert('Button Submit clicked!');
     solve_end = performance.now();
 
     //check to see if names of image and sound match at begining
