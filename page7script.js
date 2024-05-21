@@ -22,14 +22,14 @@ function onSubmitButtonClick() {
     alert('Button Submit clicked!');
     solve_end = performance.now(); ;
 	submit_time = solve_end - solve_start;
-    console.log("Submit took milliseconds. ");
+    console.log('Submit took ${submit_time} milliseconds.');
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
-	console.log("selected value is " + selected_value);
+	console.log('selected value is ' + selected_value);
 	//alert(selected_value);
-	console.log("selected image " + selected_image);
+	console.log('selected image ' + selected_image);
 	let position = selected_image.search(".");
-	console.log("position ${position}");
+	console.log('position ${position}');
 	let selected_image_name = selected_image.substring(1, selected_image.length - position);
 	alert(selected_image_name);
 	console.log("selected image name is " + selected_image_name);
