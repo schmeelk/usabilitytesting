@@ -20,9 +20,9 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     alert('Button Submit clicked!');
-    let solve_end = performance.now();
-	let submit_time = solve_end - solve_start;
-    console.log(submit_time);
+    //solve_end = performance.now();
+	//submit_time = solve_end - solve_start;
+    //console.log(submit_time);
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	console.log(selected_value);
@@ -45,6 +45,7 @@ window.addEventListener('load', choosePic);
 
 var solve_start = -1;
 var solve_end = -1;
+var submit_time = -1;
 
 var myPix = new Array(
     "bird.jpg",
