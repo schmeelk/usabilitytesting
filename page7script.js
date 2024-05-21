@@ -22,7 +22,7 @@ function onSubmitButtonClick() {
     alert('Button Submit clicked!');
     let solve_end = performance.now();
 	let submit_time = solve_end - solve_start;
-    console.log(time);
+    console.log(submit_time);
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	console.log(selected_value);
