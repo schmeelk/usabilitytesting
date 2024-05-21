@@ -20,7 +20,7 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     alert('Button Submit clicked!');
-    solve_end = performance.now();
+    let solve_end = performance.now();
 	let submit_time = solve_end - solve_start;
     console.log(time);
 	var mylist = document.getElementById("choiceList");  
@@ -28,9 +28,9 @@ function onSubmitButtonClick() {
 	console.log(selected_value);
 	alert(selected_value);
 	
-	selected_image_name = selected_image.substring(1, selected_image.search("."));
+	let selected_image_name = selected_image.substring(1, selected_image.search("."));
 	alert(selected_image_name);
-	console.log("selected image" + selected_image_name);
+	console.log("selected image " + selected_image_name);
 	
     //check to see if names of image and sound match at begining
     //log time solve results and date
