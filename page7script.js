@@ -1,7 +1,7 @@
 
 function onPlaySoundButtonClick() {
     //alert('Button Play Sound clicked!');
-    solve_start = Date.now();
+    solve_start = performance.now(); ;
 
     //create "mySound"...
     //var mySound = soundManager.createSound({
@@ -20,7 +20,7 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     alert('Button Submit clicked!');
-    solve_end = Date.now();
+    solve_end = performance.now(); ;
 	submit_time = solve_end - solve_start;
     console.log("submit time is " + submit_time);
 	var mylist = document.getElementById("choiceList");  
