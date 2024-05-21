@@ -19,23 +19,21 @@ function onPlaySoundButtonClick() {
 }
 
 function onSubmitButtonClick() {
-    alert('Button Submit clicked!');
+    //alert('Button Submit clicked!');
     solve_end = performance.now(); ;
 	submit_time = solve_end - solve_start;
     //console.log(submit_time);
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
-	alert('selected value is ' + selected_value);
+	//alert('selected value is ' + selected_value);
 	
 	if(selected_image.includes(selected_value)){
-		alert("correct!")
+		alert("Success!")
 	}
 	else{
-		alert("incorrect!")
+		alert("Please Try Again!")
 	}
 	
-	let selected_image_name = selected_image.substring(1, selected_image.length - position);
-	console.log(selected_image_name);
 	console.log(selected_value);
 	
     //check to see if names of image and sound match at begining
