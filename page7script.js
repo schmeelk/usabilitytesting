@@ -22,7 +22,7 @@ function onSubmitButtonClick() {
     alert('Button Submit clicked!');
     solve_end = Date.now();
 	submit_time = solve_end - solve_start;
-    console.log(submit_time);
+    console.log("submit time is " + submit_time);
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	console.log("selected value is " + selected_value);
