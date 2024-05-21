@@ -27,7 +27,7 @@ function onSubmitButtonClick() {
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	alert('selected value is ' + selected_value);
 	
-	if(selected_image.contains(selected_value))
+	if(selected_image.includes(selected_value))
 		alert("correct!")
 	else
 		alert("incorrect!")
