@@ -1,7 +1,7 @@
 
 function onPlaySoundButtonClick() {
     //alert('Button Play Sound clicked!');
-    solve_start = performance.now();
+    solve_start = Date.now();
 
     //create "mySound"...
     //var mySound = soundManager.createSound({
@@ -20,17 +20,18 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     alert('Button Submit clicked!');
-    solve_end = performance.now();
-	//submit_time = solve_end - solve_start;
-    //console.log(submit_time);
+    solve_end = Date.now();
+	submit_time = solve_end - solve_start;
+    console.log(submit_time);
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
-	console.log(selected_value);
-	alert(selected_value);
+	console.log("selected value is " + selected_value);
+	//alert(selected_value);
+	console.log("selected image " + selected_image);
 	
-	let selected_image_name = selected_image.substring(1, selected_image.search("."));
+	let selected_image_name = selected_image.substring(1, selected_image.search('.'));
 	alert(selected_image_name);
-	console.log("selected image " + selected_image_name);
+	console.log("selected image name is " + selected_image_name);
 	
     //check to see if names of image and sound match at begining
     //log time solve results and date
