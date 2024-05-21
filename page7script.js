@@ -28,8 +28,9 @@ function onSubmitButtonClick() {
 	console.log("selected value is " + selected_value);
 	//alert(selected_value);
 	console.log("selected image " + selected_image);
-	
-	let selected_image_name = selected_image.substring(1, selected_image.search('.'));
+	let position = selected_image.search(".");
+	console.log("position ${position}");
+	let selected_image_name = selected_image.substring(1, selected_image.length - position);
 	alert(selected_image_name);
 	console.log("selected image name is " + selected_image_name);
 	
