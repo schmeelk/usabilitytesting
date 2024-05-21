@@ -26,13 +26,15 @@ function onSubmitButtonClick() {
 	var mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	alert('selected value is ' + selected_value);
-	//alert(selected_value);
-	alert('selected image ' + selected_image);
-	let position = selected_image.search(".");
-	alert('position ${position}');
+	
+	if(selected_image.contains(selected_value))
+		alert("correct!")
+	else
+		alert("incorrect!")
+	
 	let selected_image_name = selected_image.substring(1, selected_image.length - position);
-	alert(selected_image_name);
-	alert("selected image name is " + selected_image_name);
+	console.log(selected_image_name);
+	console.log(selected_value);
 	
     //check to see if names of image and sound match at begining
     //log time solve results and date
