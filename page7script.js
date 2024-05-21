@@ -1,3 +1,21 @@
+import firebase from "firebase/app";
+import "firebase/compat/database";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+  // ...
+  // The value of `databaseURL` depends on the location of the database
+  databaseURL: "https://usabilitymetrics-default-rtdb.firebaseio.com",
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = firebase.database();
+
 
 function onPlaySoundButtonClick() {
     //alert('Button Play Sound clicked!');
@@ -35,12 +53,22 @@ function onSubmitButtonClick() {
 	}
 	
 	console.log(selected_value);
+	writeUserData(1,2,3,4);
 	
     //check to see if names of image and sound match at begining
     //log time solve results and date
 	//report to screen
 	//send to firebase database: date, time, solve_time, start_time, end_time, imagefile_name, soundfile_name
 	
+}
+
+function writeUserData(param1, param2, param3, param4) {
+  const db = getDatabase();
+  set(ref(db, 'info/' + param1), {
+    username: test1,
+    email: test2,
+    profile_picture : test3
+  });
 }
 
 let selected_image = 'cat.jpg';
