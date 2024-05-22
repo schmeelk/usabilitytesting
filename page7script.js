@@ -1,5 +1,8 @@
-import firebase from "firebase/app";
-import "firebase/compat/database";
+
+import { } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js'
+//import firebase from "firebase/app";
+//import "firebase/compat/database";
+//import { getDatabase, ref, set } from "firebase/database";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
