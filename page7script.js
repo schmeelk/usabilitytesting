@@ -49,7 +49,6 @@ let selected_image = 'cat.jpg';
 window.addEventListener('load', choosePic);
 
 
-
 var myPix = new Array(
     "bird.jpg",
     "cat.jpg",
@@ -69,5 +68,28 @@ function choosePic() {
     submitButtons.addEventListener('click', onSubmitButtonClick);
 
 };
+
+ const csvButtons = document.querySelector('.export-csv');
+ csvButtons.addEventListener('click', onCSVButtonsClick);
+ 
+ function onCSVButtonsClick(event){
+	 console.alert("csv button click");
+	 let exportData = localStorage.getItem("Solve Time");
+	 let file = new Blob([exportData], {type: 'text/plain'});
+	 let a=event.target.parent;
+	 a.href = URL.createObjectURL(file);
+	 a.download = 'exportfile'+Date.now()+'.txt';
+ }
+
+//function download(content, fileName, contentType) {
+//    var a = document.createElement("a");
+//    var file = new Blob([content], {type: contentType});
+//    a.href = URL.createObjectURL(file);
+//    a.download = fileName;
+//    a.click();
+//}
+//download(jsonData, 'json.txt', 'text/plain');
+
+
 
 
