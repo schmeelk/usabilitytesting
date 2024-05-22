@@ -10,7 +10,7 @@ function onPlaySoundButtonClick() {
 	console.log(soundPath);
 	
 	const audio = new Audio(soundPath);
-	audio.play();
+	audio.play();  //2seconds look at API ... edit media for different lenths  ... study A/B testing 
 }
 
 function onSubmitButtonClick() {
@@ -23,14 +23,15 @@ function onSubmitButtonClick() {
 	//alert('selected value is ' + selected_value);
 	
 	if(selected_image.includes(selected_value)){
-		alert("Success!")
+		alert("Success!");
 	}
 	else{
-		alert("Please Try Again!")
+		alert("Please Try Again!");
 	}
 	
 	console.log(selected_value);
-	writeUserData();// date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
+	writeUserData();// date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name, incorrect attempts
+	
 }
 
 
