@@ -1,5 +1,5 @@
 
-import { } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js'
+//import { } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js'
 //import firebase from "firebase/app";
 //import "firebase/compat/database";
 //import { getDatabase, ref, set } from "firebase/database";
