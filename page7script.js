@@ -1,18 +1,10 @@
-
-
-
+let solve_start = -1;
+let solve_end = -1;
+let submit_time = -1;
 
 function onPlaySoundButtonClick() {
     //alert('Button Play Sound clicked!');
-    solve_start = performance.now(); ;
-
-    //create "mySound"...
-    //var mySound = soundManager.createSound({
-    //    url: 'media/captcha-sounds/cat.mp3'
-    //});
-
-    // ...and play it
-    //mySound.play();
+    solve_start = Date.now(); 
 
 	const soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
 	console.log(soundPath);
@@ -23,10 +15,10 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     //alert('Button Submit clicked!');
-    solve_end = performance.now(); ;
+    solve_end = Date.now(); ;
 	submit_time = solve_end - solve_start;
-    //console.log(submit_time);
-	var mylist = document.getElementById("choiceList");  
+    console.log(submit_time);
+	let mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
 	//alert('selected value is ' + selected_value);
 	
@@ -39,30 +31,26 @@ function onSubmitButtonClick() {
 	
 	console.log(selected_value);
 	writeUserData(1,2,3,4);
-	
-    //check to see if names of image and sound match at begining
-    //log time solve results and date
-	//report to screen
-	//send to firebase database: date, time, solve_time, start_time, end_time, imagefile_name, soundfile_name
+
+	// date, time, page, solve_time, start_time, end_time, imagefile_name, soundfile_name
 	
 }
 
-function writeUserData(param1, param2, param3, param4) {
-  //const db = getDatabase();
-  //set(ref(db, 'info/' + param1), {
-  //  testa: test1,
-  //  testb: test2,
-  //  testc : test3
-  //});
+d
+
+
+function writeUserData() {
+  // date, time, page, solve_time, start_time, end_time, imagefile_name, soundfile_name
+  localStorage.setItem("Solve Time", solve_time.toString());
+  
+ 
 }
 
 let selected_image = 'cat.jpg';
 
 window.addEventListener('load', choosePic);
 
-var solve_start = -1;
-var solve_end = -1;
-var submit_time = -1;
+
 
 var myPix = new Array(
     "bird.jpg",
