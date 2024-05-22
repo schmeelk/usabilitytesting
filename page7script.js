@@ -30,15 +30,15 @@ function onSubmitButtonClick() {
 	}
 	
 	console.log(selected_value);
-	writeUserData();// date, time, page, solve_time, start_time, end_time, imagefile_name, soundfile_name
+	writeUserData();// date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
 }
 
 
 
 
 function writeUserData() {
-  // date, time, page, solve_time, start_time, end_time, imagefile_name, soundfile_name
-  localStorage.setItem("Solve Time", solve_time.toString());
+  // date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
+  localStorage.setItem("Solve Time", submit_time.toString());
   
  
 }
