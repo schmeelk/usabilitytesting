@@ -1,23 +1,5 @@
 
-//import { } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js'
-//import firebase from "firebase/app";
-//import "firebase/compat/database";
-//import { getDatabase, ref, set } from "firebase/database";
 
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-//const firebaseConfig = {
-  // ...
-  // The value of `databaseURL` depends on the location of the database
-  //databaseURL: "https://usabilitymetrics-default-rtdb.firebaseio.com",
-//};
-
-// Initialize Firebase
-//firebase.initializeApp(firebaseConfig);
-
-
-// Initialize Realtime Database and get a reference to the service
-//const database = firebase.database();
 
 
 function onPlaySoundButtonClick() {
@@ -66,12 +48,12 @@ function onSubmitButtonClick() {
 }
 
 function writeUserData(param1, param2, param3, param4) {
-  const db = getDatabase();
-  set(ref(db, 'info/' + param1), {
-    testa: test1,
-    testb: test2,
-    testc : test3
-  });
+  //const db = getDatabase();
+  //set(ref(db, 'info/' + param1), {
+  //  testa: test1,
+  //  testb: test2,
+  //  testc : test3
+  //});
 }
 
 let selected_image = 'cat.jpg';
