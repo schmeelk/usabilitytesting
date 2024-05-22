@@ -31,12 +31,10 @@ function onSubmitButtonClick() {
 	
 	console.log(selected_value);
 	writeUserData();
-
 	// date, time, page, solve_time, start_time, end_time, imagefile_name, soundfile_name
-	
 }
 
-d
+
 
 
 function writeUserData() {
