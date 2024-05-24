@@ -40,7 +40,7 @@ function SubmitDetails(match, comments, selectedTextValue) {
   this.soundFileName = soundPath;
   this.textNames = selectedTextValue;
   this.accurate = match;
-  this.attemptNumber = attempts;
+  this.attemptNumber = attempt_count;
   this.usercomments = comments;
 }
 
