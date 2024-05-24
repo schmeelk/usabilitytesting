@@ -81,12 +81,12 @@ function onSubmitButtonClick() {
 	let sd = new SubmitDetails(match, comments);
 	console.log(sd);
 	listOfSubmitObjects.push(sd);
-	writeUserData();	
+	writeUserData(sd);	
 }
 
 function writeUserData() {
   // date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
-  localStorage.setItem("Solve Time", submit_time.toString()); 
+  localStorage.setItem(listOfSubmitObjects); 
 }
 
 
