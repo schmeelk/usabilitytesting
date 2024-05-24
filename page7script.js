@@ -76,7 +76,7 @@ function onSubmitButtonClick() {
 		match = 'Fail';
 	}
 
-	console.log(foo);
+	console.log(comments);
 	console.log(listOfSubmitObjects);
 	let sd = new SubmitDetails(match, comments);
 	console.log(sd);
