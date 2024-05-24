@@ -4,6 +4,7 @@ let submit_time = -1;
 let attempt_count = -1;
 let listOfSubmitObjects = [];
 let selected_image = 'cat.jpg';
+let soundPath = '';
 
 window.addEventListener('load', choosePic);
 
@@ -28,15 +29,16 @@ function choosePic() {
 };
 
 
-function SubmitDetails(match, comments) {
+function SubmitDetails(match, comments, selectedTextValue) {
   //date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name, attempts
   this.date = Date.now();
   this.page = 'Page7';
   this.submit_time = submit_time;
   this.solve_start_time = solve_start;
   this.solve_end_time = solve_end;
-  this.imageFileName = imagefile_name;
-  this.soundFileName = soundFile_name;
+  this.imageFileName = selected_image;
+  this.soundFileName = soundPath;
+  this.textNames = selectedTextValue;
   this.accurate = match;
   this.attemptNumber = attempts;
   this.usercomments = comments;
@@ -48,7 +50,7 @@ function onPlaySoundButtonClick() {
 	//alert('Play Sound Button Submit clicked!');
     solve_start = Date.now(); 
 
-	const soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
+	soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
 	console.log(soundPath);
 	
 	const audio = new Audio(soundPath);
@@ -78,7 +80,7 @@ function onSubmitButtonClick() {
 
 	console.log(comments);
 	console.log(listOfSubmitObjects);
-	let sd = new SubmitDetails(match, comments);
+	let sd = new SubmitDetails(match, comments, selected_value);
 	console.log(sd);
 	listOfSubmitObjects.push(sd);
 	writeUserData(sd);	
