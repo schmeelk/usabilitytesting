@@ -88,7 +88,7 @@ function onSubmitButtonClick() {
 
 function writeUserData() {
   // date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
-  localStorage.setItem(listOfSubmitObjects); 
+  localStorage.setItem("arry of submits", listOfSubmitObjects); 
   console.log('write user data');
   console.log(listOfSubmitObjects);
 }
