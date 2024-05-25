@@ -23,7 +23,7 @@ var myPix = new Array(
 
 
 function choosePic() {
-    const randomNum = Math.floor(Math.random() * myPix.length);
+    let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
     document.getElementById("td11").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}`;
 	
