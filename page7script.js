@@ -96,7 +96,7 @@ function writeUserData() {
 }
 
 
-function SubmitDetails2JSON(){
+function submitDetails2JSON(){
 	//https://stackoverflow.com/questions/2295496/convert-array-to-json
 	//listOfSubmitObjects.forEach((element, index, array) => {
     //console.log(element.x); // 100, 200, 300
@@ -126,12 +126,12 @@ function SubmitDetails2JSON(){
 	 console.log(exportData);
 	 let a = document.createElement("a");
 	 console.log('here0');
-	 a.href = URL.createObjectURL(new Blob([JSON.stringify(SubmitDetails2JSON())], {
-        type: "text/plain"
-      }));
-	  //a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData, null, 2)], {
+	 //a.href = URL.createObjectURL(new Blob([JSON.stringify(SubmitDetails2JSON())], {
       //  type: "text/plain"
       //}));
+	  a.href = URL.createObjectURL(new Blob([JSON.stringify(submitDetails2JSON(), null, 2)], {
+        type: "text/plain"
+      }));
 	  //JSON.parse(JSON.stringify(
 	 //let file = new Blob([exportData], {type: 'text/plain'});
 	 //let a = event.target.parent;
