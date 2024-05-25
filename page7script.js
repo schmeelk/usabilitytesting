@@ -109,12 +109,6 @@ function submitDetails2JSON(exportData){
 	  let o = listOfSubmitObjects[i];
       json_arr.push([{
 	      "Date": o.date,  //.toString(),
-		  "Day" : o.date.getDay(),
-		  "Month" : o.date.getMonth(),
-		  "Year" : o.date.getYear(),
-		  "Hour" : o.date.getHours(),
-		  "Minute" : o.date.getMinutes(),
-		  "Milliseconds" : o.date.getMilliseconds(),
 		  "Parsed Date" : Date.parse(o.date),
 		  "Page":o.page,
 		  "Submit Time":o.submit_time, //.toString(),
