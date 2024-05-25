@@ -151,7 +151,7 @@ function submitDetails2JSON(exportData){
       //}));
 	  console.log(JSON.stringify(exportData, null, 2));
 	  a.href = URL.createObjectURL(new Blob([JSON.stringify(submitDetails2JSON(), null, 2)], {
-        type: "text/plain"
+        type: "text/json"
       }));
 	  //JSON.parse(JSON.stringify(
 	 //let file = new Blob([exportData], {type: 'text/plain'});
