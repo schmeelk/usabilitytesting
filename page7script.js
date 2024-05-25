@@ -107,7 +107,7 @@ function submitDetails2JSON(exportData){
     let json_arr = [];
     for(let i in listOfSubmitObjects) {
 	  let o = listOfSubmitObjects[i];
-      json_arr.push([
+      json_arr.push([{
 	      "Date": o.date,
 		  "Page":o.page,
 		  "Submit Time":o.submit_time,
@@ -120,7 +120,7 @@ function submitDetails2JSON(exportData){
 		  "Submit Attempt Number":o.submitAttemptNumber,
 		  "Play Button Count":o.playButtonCount,
 		  "User Comments":o.usercomments,
-	  ]);  
+	  }]);  
     }
 	console.log('Convert to JSON');
 	console.log(json_arr);
