@@ -118,7 +118,7 @@ function SubmitDetails2JSON(){
 	 console.log(exportData);
 	 let a = document.createElement("a");
 	 console.log('here0');
-	 a.href = URL.createObjectURL(JSON.parse(JSON.stringify(exportData))), {
+	 a.href = URL.createObjectURL(new Blob([JSON.parse(JSON.stringify(exportData))], {
         type: "text/plain"
       }));
 	  //a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData, null, 2)], {
