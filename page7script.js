@@ -79,7 +79,7 @@ function onSubmitButtonClick() {
 		comments = prompt('Please Try Again! Type any comments here'); 
 		match = 'Fail';
 	}
-
+	console.log('onSubmitButtonClick after prompt!');
 	console.log(comments);
 	console.log(listOfSubmitObjects);
 	let sd = new SubmitDetails(match, comments, selected_value);
@@ -96,7 +96,15 @@ function writeUserData() {
 }
 
 
+function SubmitDetails2JSON(){
+	
+	listOfSubmitObjects.forEach((element, index, array) => {
+    console.log(element.x); // 100, 200, 300
+    console.log(index); // 0, 1, 2
+    console.log(array); // same myArray object 3 times
+    });
 
+}
 
 
 
@@ -110,9 +118,13 @@ function writeUserData() {
 	 console.log(exportData);
 	 let a = document.createElement("a");
 	 console.log('here0');
-	 a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData, null, 2)], {
+	 a.href = URL.createObjectURL(JSON.parse(JSON.stringify(exportData))), {
         type: "text/plain"
       }));
+	  //a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData, null, 2)], {
+      //  type: "text/plain"
+      //}));
+	  //JSON.parse(JSON.stringify(
 	 //let file = new Blob([exportData], {type: 'text/plain'});
 	 //let a = event.target.parent;
 	 console.log('here1');
