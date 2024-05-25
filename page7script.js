@@ -109,7 +109,7 @@ function submitDetails2JSON(exportData){
 	  let o = listOfSubmitObjects[i];
       json_arr.push([{
 	      "Date": o.date,  //.toString(),
-		  "Parsed Date" : Date.parse(o.date),
+		  "Parsed Date" : o.date.toString(),
 		  //"Day" : o.date.getDay(),
 		  //"Month" : o.date.getMonth(),
 		  //"Year" : o.date.getYear(),
