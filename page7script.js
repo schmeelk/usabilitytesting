@@ -1,7 +1,8 @@
 let solve_start = -1;
 let solve_end = -1;
 let submit_time = -1;
-let attempt_count = -1;
+let submit_attempt_count = 0;
+let play_button_attempt_count = 0;
 let listOfSubmitObjects = [];
 let selected_image = 'cat.jpg';
 let soundPath = '';
@@ -40,7 +41,8 @@ function SubmitDetails(match, comments, selectedTextValue) {
   this.soundFileName = soundPath;
   this.textNames = selectedTextValue;
   this.accurate = match;
-  this.attemptNumber = attempt_count;
+  this.submitAttemptNumber = submit_attempt_count;
+  this.playButtonCount = play_button_attempt_count;
   this.usercomments = comments;
 }
 
@@ -49,7 +51,7 @@ function SubmitDetails(match, comments, selectedTextValue) {
 function onPlaySoundButtonClick() {
 	//alert('Play Sound Button Submit clicked!');
     solve_start = Date.now(); 
-
+    play_button_attempt_count = play_button_attempt_count + 1;
 	soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
 	console.log(soundPath);
 	
@@ -61,7 +63,7 @@ function onSubmitButtonClick() {
     //alert('Submit Button clicked!');
     solve_end = Date.now(); ;
 	submit_time = solve_end - solve_start;
-	attempt_count = attempt_count + 1;
+	submit_attempt_count = submit_attempt_count + 1;
     console.log(submit_time);
 	let mylist = document.getElementById("choiceList");  
     let selected_value = mylist.options[mylist.selectedIndex].text;  
