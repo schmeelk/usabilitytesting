@@ -110,6 +110,12 @@ function submitDetails2JSON(exportData){
       json_arr.push([{
 	      "Date": o.date,  //.toString(),
 		  "Parsed Date" : Date.parse(o.date),
+		  //"Day" : o.date.getDay(),
+		  //"Month" : o.date.getMonth(),
+		  //"Year" : o.date.getYear(),
+		  //"Hour" : o.date.getHours(),
+		  //"Minute" : o.date.getMinutes(),
+		  //"Milliseconds" : o.date.getMilliseconds(),
 		  "Page":o.page,
 		  "Submit Time":o.submit_time, //.toString(),
 		  "Solve Start Time":o.solve_start_time, //.toString(),
