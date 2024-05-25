@@ -25,7 +25,8 @@ var myPix = new Array(
 function choosePic() {
     let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
-    document.getElementById("td11").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}`;
+    let button_td11 = document.getElementById("td11").src;
+    buttons.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}" />';
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image12 = myPix[randomNum];
