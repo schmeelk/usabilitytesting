@@ -90,7 +90,7 @@ function onSubmitButtonClick() {
 
 function writeUserData() {
   // date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name
-  localStorage.setItem("arry of submits", listOfSubmitObjects); 
+  localStorage.setItem("arraySubmits", listOfSubmitObjects); 
   console.log('write user data');
   console.log(listOfSubmitObjects);
 }
@@ -105,11 +105,12 @@ function writeUserData() {
  
  function onCSVButtonsClick(event){
 	 console.alert("CSV Button Clicked!");
-	 let exportData = localStorage.getItem("Solve Time");
+	 let exportData = localStorage.getItem("arraySubmits");
 	 let file = new Blob([exportData], {type: 'text/plain'});
 	 let a=event.target.parent;
 	 a.href = URL.createObjectURL(file);
-	 a.download = 'exportfile'+Date.now()+'.txt';
+     let fileDetails = prompt('Please enter any file name details here!'); 
+	 a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
  }
 
 //function download(content, fileName, contentType) {
