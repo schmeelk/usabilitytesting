@@ -61,7 +61,7 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     //alert('Submit Button clicked!');
-    solve_end = Date.now(); ;
+    solve_end = Date.now(); 
 	submit_time = solve_end - solve_start;
 	submit_attempt_count = submit_attempt_count + 1;
     console.log(submit_time);
@@ -108,17 +108,23 @@ function submitDetails2JSON(exportData){
     for(let i in listOfSubmitObjects) {
 	  let o = listOfSubmitObjects[i];
       json_arr.push([{
-	      "Date": o.date,
+	      "Date": o.date,  //.toString(),
+		  "Day" : o.date.getDay(),
+		  "Month" : o.date.getMonth(),
+		  "Year" : o.date.getYear(),
+		  "Hour" : o.date.getHours(),
+		  "Minute" : o.date.getMinutes(),
+		  "Milliseconds" : o.date.getMilliseconds();
 		  "Page":o.page,
-		  "Submit Time":o.submit_time,
-		  "Solve Start Time":o.solve_start_time,
-		  "Solve End Time":o.solve_end_time,
+		  "Submit Time":o.submit_time, //.toString(),
+		  "Solve Start Time":o.solve_start_time, //.toString(),
+		  "Solve End Time":o.solve_end_time, //.toString(),
 		  "Image File Name":o.imageFileName,
 		  "Sound File Name":o.soundFileName,
 		  "Text Names":o.textNames,
 		  "Accurate":o.accurate,
-		  "Submit Attempt Number":o.submitAttemptNumber,
-		  "Play Button Count":o.playButtonCount,
+		  "Submit Attempt Number":o.submitAttemptNumber, //.toString(),
+		  "Play Button Count":o.playButtonCount, //.toString(),
 		  "User Comments":o.usercomments,
 	  }]);  
     }
