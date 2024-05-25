@@ -104,7 +104,7 @@ function writeUserData() {
  csvButtons.addEventListener('click', onCSVButtonsClick);
  
  function onCSVButtonsClick(event){
-	 console.alert("CSV Button Clicked!");
+	 alert("CSV Button Clicked!");
 	 let exportData = localStorage.getItem("arraySubmits");
 	 let file = new Blob([exportData], {type: 'text/plain'});
 	 let a=event.target.parent;
