@@ -109,6 +109,7 @@ function writeUserData() {
 	 console.log('in onCSVButtonsClick');
 	 console.log(exportData);
 	 let a = document.createElement("a");
+	 console.log('here0');
 	 let file = new Blob([exportData], {type: 'text/plain'});
 	 //let a = event.target.parent;
 	 console.log('here1');
