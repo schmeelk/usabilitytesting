@@ -49,7 +49,7 @@ reCAPTCHA v2
   </head>
   <body>
     <!-- <form action="https://schmeelk.github.io/usabilitytesting/page1.html" method="GET"> -->
-      <div class="g-recaptcha" data-sitekey="6LfGu4QkAAAAABGWbNHGy5VabI04KsVR_bZjnyYG" data-callback="onSuccessReCaptcha" ></div>
+      <div class="g-recaptcha" data-sitekey="6LfGu4QkAAAAABGWbNHGy5VabI04KsVR_bZjnyYG" data-callback="onSuccessReCaptcha" data-expired-callback="onExipredReCaptcha" data-error-callback="onErrorReCaptcha" ></div>
       <br/>
       <!-- <input type="submit" value="Submit"> -->
     <!-- </form> -->
@@ -83,7 +83,15 @@ reCAPTCHA v2
 <script LANGUAGE="JavaScript"> 
 
 function onSuccessReCaptcha(event){
-  alert('Confirming we are in here!');
+  alert('Confirming we are in here in Success!');
+}
+
+function onExpiredReCaptcha(event){
+  alert('Confirming we are in here in Expired!');
+}
+
+function onErrorReCaptcha(event){
+  alert('Confirming we are in here in Error!');
 }
 
 </script>
