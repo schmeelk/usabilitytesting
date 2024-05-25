@@ -114,7 +114,8 @@ function submitDetails2JSON(exportData){
 		  "Year" : o.date.getYear(),
 		  "Hour" : o.date.getHours(),
 		  "Minute" : o.date.getMinutes(),
-		  "Milliseconds" : o.date.getMilliseconds();
+		  "Milliseconds" : o.date.getMilliseconds(),
+		  "Parsed Date" : Date.parse(o.date),
 		  "Page":o.page,
 		  "Submit Time":o.submit_time, //.toString(),
 		  "Solve Start Time":o.solve_start_time, //.toString(),
