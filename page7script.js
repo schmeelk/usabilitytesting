@@ -104,14 +104,27 @@ function submitDetails2JSON(exportData){
     //console.log(array); // same myArray object 3 times
     //});
 	
-    let json_arr = {};
+    let json_arr = [];
     for(let i in listOfSubmitObjects) {
-      let jsonObj = new Object();
-      jsonObj.submission = listOfSubmitObjects[i];
-      newArray.push(jsonObj);
+	  let o = listOfSubmitObjects[i];
+      json_arr.push([
+	      "Date": o.date,
+		  "Page":o.page,
+		  "Submit Time":o.submit_time,
+		  "Solve Start Time":o.solve_start_time,
+		  "Solve End Time":o.solve_end_time,
+		  "Image File Name":o.imageFileName,
+		  "Sound File Name":o.soundFileName,
+		  "Text Names":o.textNames,
+		  "Accurate":o.accurate,
+		  "Submit Attempt Number":o.submitAttemptNumber,
+		  "Play Button Count":o.playButtonCount,
+		  "User Comments":o.usercomments,
+	  ]);  
     }
-	
-	return newArray;
+	console.log('Convert to JSON');
+	console.log(json_arr);
+	return json_arr;
 }
 
 
