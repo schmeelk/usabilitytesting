@@ -116,12 +116,17 @@ function writeUserData() {
 	 //let file = new Blob([exportData], {type: 'text/plain'});
 	 //let a = event.target.parent;
 	 console.log('here1');
-	 a.href = URL.createObjectURL(file);
+	 let fileDetails = prompt('Please enter any file name details here!'); 
+	 //a.href = URL.createObjectURL(file);
+	 a.setAttribute("download", fileDetails+'SubmitExportFile'+Date.now()+'.txt');
 	 console.log('here2');
-     let fileDetails = prompt('Please enter any file name details here!'); 
+	 document.body.appendChild(a);
 	 console.log('here3');
-	 a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
+	 a.click();
 	 console.log('here3');
+     document.body.removeChild(a);
+	 //a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
+	 console.log('here4');
  }
 
 //function download(content, fileName, contentType) {
