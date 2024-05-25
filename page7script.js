@@ -110,7 +110,7 @@ function writeUserData() {
 	 console.log(exportData);
 	 let a = document.createElement("a");
 	 let file = new Blob([exportData], {type: 'text/plain'});
-	 let a = event.target.parent;
+	 //let a = event.target.parent;
 	 console.log('here1');
 	 a.href = URL.createObjectURL(file);
 	 console.log('here2');
