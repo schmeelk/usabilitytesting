@@ -106,8 +106,10 @@ function writeUserData() {
  function onCSVButtonsClick(event){
 	 alert("CSV Button Clicked!");
 	 let exportData = localStorage.getItem("arraySubmits");
+	 console.log('in onCSVButtonsClick');
+	 console.log(exportData);
 	 let file = new Blob([exportData], {type: 'text/plain'});
-	 let a=event.target.parent;
+	 let a = event.target.parent;
 	 a.href = URL.createObjectURL(file);
      let fileDetails = prompt('Please enter any file name details here!'); 
 	 a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
