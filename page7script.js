@@ -116,7 +116,9 @@ function writeUserData() {
 	 a.href = URL.createObjectURL(file);
 	 console.log('here2');
      let fileDetails = prompt('Please enter any file name details here!'); 
+	 console.log('here3');
 	 a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
+	 console.log('here3');
  }
 
 //function download(content, fileName, contentType) {
