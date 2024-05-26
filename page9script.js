@@ -25,22 +25,22 @@ var myPixOnPage = new Array();
 
 
 const button_td11 = document.querySelector('td11');
-playButtons.addEventListener('click', onImageButtonClick);
+button_td11.addEventListener('click', onImageButtonClick);
 
 const button_td12 = document.querySelector('td12');
-submitButtons.addEventListener('click', onImageButtonClick);
+button_td12.addEventListener('click', onImageButtonClick);
 	
 const button_td13 = document.querySelector('td13');
-playButtons.addEventListener('click', onImageButtonClick);
+button_td13.addEventListener('click', onImageButtonClick);
 
 const button_td21 = document.querySelector('td21');
-submitButtons.addEventListener('click', onImageButtonClick);
+button_td21.addEventListener('click', onImageButtonClick);
 	
 const button_td22 = document.querySelector('td22');
-playButtons.addEventListener('click', onImageButtonClick);
+button_td22.addEventListener('click', onImageButtonClick);
 
 const button_td23 = document.querySelector('td23');
-submitButtons.addEventListener('click', onImageButtonClick);
+button_td23.addEventListener('click', onImageButtonClick);
 	
 	
 function onImageButtonClick() {
