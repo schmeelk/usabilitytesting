@@ -21,6 +21,9 @@ var myPix = new Array(
     "fireworks.jpg"
 );
 
+var myPixOnPage = new Array{
+	
+};
 
 
 const button_td11 = document.querySelector('td11');
@@ -51,26 +54,32 @@ function choosePic() {
     selected_image11 = myPix[randomNum];
     let button_td11 = document.getElementById("td11").src;
     button_td11.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/'+${selected_image11}+'" />';
+	myPixOnPage.push(selected_image11);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image12 = myPix[randomNum];
     document.getElementById("td12").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image12}`;
-	
+	myPixOnPage.push(selected_image12);
+
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image13 = myPix[randomNum];
     document.getElementById("td13").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image13}`;
+	myPixOnPage.push(selected_image13);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image21 = myPix[randomNum];
     document.getElementById("td21").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image21}`;
+	myPixOnPage.push(selected_image21);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image22 = myPix[randomNum];
     document.getElementById("td22").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image22}`;
+	myPixOnPage.push(selected_image22);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image23 = myPix[randomNum];
     document.getElementById("td23").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image23}`;
+    myPixOnPage.push(selected_image23);
 
     const playButtons = document.querySelector('.play-button');
     playButtons.addEventListener('click', onPlaySoundButtonClick);
@@ -158,8 +167,8 @@ function submitDetails2JSON(exportData){
     for(let i in listOfSubmitObjects) {
 	  let o = listOfSubmitObjects[i];
       json_arr.push([{
-	      "Date": o.date,  //.toString(),
-		  "Parsed Date" : Date.parse(o.date),
+	      "Sumit Details Time": o.date,  //.toString(),
+		  "Export Date Information" : (new Date()).toString(),
 		  //"Day" : o.date.getDay(),
 		  //"Month" : o.date.getMonth(),
 		  //"Year" : o.date.getYear(),
@@ -201,7 +210,7 @@ function submitDetails2JSON(exportData){
       //}));
 	  console.log(JSON.stringify(exportData, null, 2));
 	  a.href = URL.createObjectURL(new Blob([JSON.stringify(submitDetails2JSON(), null, 2)], {
-        type: "text/plain"
+        type: "application/json"
       }));
 	  //JSON.parse(JSON.stringify(
 	 //let file = new Blob([exportData], {type: 'text/plain'});
