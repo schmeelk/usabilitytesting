@@ -59,7 +59,7 @@ const button_td23 = document.querySelector('.td23-button');
 button_td23.addEventListener('click', onImageButtonClick);
 
 function choosePic() {
-	let pickedAlread = Array();
+	let pickedAlready = Array();
 	
     let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
