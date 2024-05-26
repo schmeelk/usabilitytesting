@@ -70,7 +70,7 @@ function choosePic() {
     document.getElementById("td11img").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}`;
     myPixOnPage.push(selected_image11);
 
-	while(pickedAlready.findIndex(randomNum) != -1){
+	while(pickedAlready.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image12 = myPix[randomNum];
