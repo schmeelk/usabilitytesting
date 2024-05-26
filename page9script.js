@@ -31,6 +31,25 @@ function onImageButtonClick() {
 }
 
 function choosePic() {
+	
+	const button_td11 = document.querySelector('.td11');
+    button_td11.addEventListener('click', onImageButtonClick);
+
+    const button_td12 = document.querySelector('.td12');
+    button_td12.addEventListener('click', onImageButtonClick);
+
+    const button_td13 = document.querySelector('.td13');
+    button_td13.addEventListener('click', onImageButtonClick);
+
+    const button_td21 = document.querySelector('.td21');
+    button_td21.addEventListener('click', onImageButtonClick);
+
+    const button_td22 = document.querySelector('.td22');
+    button_td22.addEventListener('click', onImageButtonClick);
+
+    const button_td23 = document.querySelector('.td23');
+    button_td23.addEventListener('click', onImageButtonClick);
+	
     let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
 
@@ -68,24 +87,6 @@ function choosePic() {
 
     document.getElementById("td23").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image23}`;
     myPixOnPage.push(selected_image23);
-
-    const button_td11 = document.querySelector('td11');
-    button_td11.addEventListener('click', onImageButtonClick);
-
-    const button_td12 = document.querySelector('td12');
-    button_td12.addEventListener('click', onImageButtonClick);
-
-    const button_td13 = document.querySelector('td13');
-    button_td13.addEventListener('click', onImageButtonClick);
-
-    const button_td21 = document.querySelector('td21');
-    button_td21.addEventListener('click', onImageButtonClick);
-
-    const button_td22 = document.querySelector('td22');
-    button_td22.addEventListener('click', onImageButtonClick);
-
-    const button_td23 = document.querySelector('td23');
-    button_td23.addEventListener('click', onImageButtonClick);
 
     const playButtons = document.querySelector('.play-button');
     playButtons.addEventListener('click', onPlaySoundButtonClick);
@@ -234,11 +235,3 @@ function onCSVButtonsClick(event) {
     console.log('here4');
 }
 
-//function download(content, fileName, contentType) {
-//    var a = document.createElement("a");
-//    var file = new Blob([content], {type: contentType});
-//    a.href = URL.createObjectURL(file);
-//    a.download = fileName;
-//    a.click();
-//}
-//download(jsonData, 'json.txt', 'text/plain');
