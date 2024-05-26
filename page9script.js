@@ -32,22 +32,22 @@ function onImageButtonClick() {
 
 function choosePic() {
 	
-	const button_td11 = document.querySelector('.td11');
+	const button_td11 = document.querySelector('.td11-button');
     button_td11.addEventListener('click', onImageButtonClick);
 
-    const button_td12 = document.querySelector('.td12');
+    const button_td12 = document.querySelector('.td12-button');
     button_td12.addEventListener('click', onImageButtonClick);
 
-    const button_td13 = document.querySelector('.td13');
+    const button_td13 = document.querySelector('.td13-button');
     button_td13.addEventListener('click', onImageButtonClick);
 
-    const button_td21 = document.querySelector('.td21');
+    const button_td21 = document.querySelector('.td21-button');
     button_td21.addEventListener('click', onImageButtonClick);
 
-    const button_td22 = document.querySelector('.td22');
+    const button_td22 = document.querySelector('.td22-button');
     button_td22.addEventListener('click', onImageButtonClick);
 
-    const button_td23 = document.querySelector('.td23');
+    const button_td23 = document.querySelector('.td23-button');
     button_td23.addEventListener('click', onImageButtonClick);
 	
     let randomNum = Math.floor(Math.random() * myPix.length);
