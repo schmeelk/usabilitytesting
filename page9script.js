@@ -78,7 +78,7 @@ function choosePic() {
     document.getElementById("td12").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image12}`;
     myPixOnPage.push(selected_image12);
 
-    while(pickedAlready.findIndex(randomNum) != -1){
+    while(pickedAlready.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image13 = myPix[randomNum];
@@ -86,7 +86,7 @@ function choosePic() {
     document.getElementById("td13").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image13}`;
     myPixOnPage.push(selected_image13);
 
-    while(pickedAlready.findIndex(randomNum) != -1){
+    while(pickedAlready.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image21 = myPix[randomNum];
@@ -94,7 +94,7 @@ function choosePic() {
     document.getElementById("td21").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image21}`;
     myPixOnPage.push(selected_image21);
 
-    while(pickedAlready.findIndex(randomNum) != -1){
+    while(pickedAlready.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image22 = myPix[randomNum];
@@ -102,7 +102,7 @@ function choosePic() {
     document.getElementById("td22").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image22}`;
     myPixOnPage.push(selected_image22);
 
-    while(pickedAlready.findIndex(randomNum) != -1){
+    while(pickedAlready.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image23 = myPix[randomNum];
