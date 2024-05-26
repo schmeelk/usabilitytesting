@@ -53,7 +53,7 @@ function choosePic() {
 	
     //let button_td11 = document.getElementById("td11").src;
     //button_td11.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/'+${selected_image11}+'" />';
-	document.getElementById("td11img").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/fireworks.jpg`;
+	document.getElementById("td11img").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}`;
 	myPixOnPage.push(selected_image11);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
