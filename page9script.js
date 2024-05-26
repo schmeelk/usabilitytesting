@@ -18,7 +18,17 @@ window.addEventListener('load', choosePic);
 var myPix = new Array(
     "bird.jpg",
     "cat.jpg",
-    "fireworks.jpg"
+    "fireworks.jpg",
+	"breaking-glass.jpg",
+	"chimes.jpg",
+	"clock.jpg",
+	"dolphin.jpg",
+	"door-knock.jpg",
+	drum.jpg",
+	"geese.jpg",
+	"phone.jpg",
+	"rain.jpg",
+	"saw.jpg"
 );
 
 var myPixOnPage = new Array();
