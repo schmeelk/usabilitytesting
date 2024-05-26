@@ -24,7 +24,7 @@ var myPix = new Array(
 	"clock.jpg",
 	"dolphin.jpg",
 	"door-knock.jpg",
-	drum.jpg",
+	"drum.jpg",
 	"geese.jpg",
 	"phone.jpg",
 	"rain.jpg",
