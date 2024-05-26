@@ -64,7 +64,7 @@ function choosePic() {
 	
     let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
-	pickedAlreadyMyPicIndexpush(randomNum);
+	pickedAlreadyMyPicIndex.push(randomNum);
 
     //let button_td11 = document.getElementById("td11").src;
     //button_td11.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/'+${selected_image11}+'" />';
