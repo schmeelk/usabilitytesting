@@ -21,9 +21,7 @@ var myPix = new Array(
     "fireworks.jpg"
 );
 
-var myPixOnPage = new Array{
-	
-};
+var myPixOnPage = new Array{"cat.jpg"};
 
 
 const button_td11 = document.querySelector('td11');
