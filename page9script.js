@@ -71,47 +71,47 @@ function choosePic() {
     document.getElementById("td11img").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image11}`;
     myPixOnPage.push(selected_image11);
 
-	while(pickedAlreadyMyPicIndexincludes(randomNum)){
+	while(pickedAlreadyMyPicIndex.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image12 = myPix[randomNum];
-    pickedAlreadyMyPicIndexpush(randomNum);
+    pickedAlreadyMyPicIndex.push(randomNum);
 	
     document.getElementById("td12").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image12}`;
     myPixOnPage.push(selected_image12);
 
-    while(pickedAlreadyMyPicIndexincludes(randomNum)){
+    while(pickedAlreadyMyPicIndex.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image13 = myPix[randomNum];
-    pickedAlreadyMyPicIndexpush(randomNum);
+    pickedAlreadyMyPicIndex.push(randomNum);
 	
     document.getElementById("td13").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image13}`;
     myPixOnPage.push(selected_image13);
 
-    while(pickedAlreadyMyPicIndexincludes(randomNum)){
+    while(pickedAlreadyMyPicIndex.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image21 = myPix[randomNum];
-	pickedAlreadyMyPicIndexpush(randomNum);
+	pickedAlreadyMyPicIndex.push(randomNum);
 
     document.getElementById("td21").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image21}`;
     myPixOnPage.push(selected_image21);
 
-    while(pickedAlreadyMyPicIndexincludes(randomNum)){
+    while(pickedAlreadyMyPicIndex.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image22 = myPix[randomNum];
-	pickedAlreadyMyPicIndexpush(randomNum);
+	pickedAlreadyMyPicIndex.push(randomNum);
 	
     document.getElementById("td22").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image22}`;
     myPixOnPage.push(selected_image22);
 
-    while(pickedAlreadyMyPicIndexincludes(randomNum)){
+    while(pickedAlreadyMyPicIndex.includes(randomNum)){
 		randomNum = Math.floor(Math.random() * myPix.length);
 	}
     selected_image23 = myPix[randomNum];
-	pickedAlreadyMyPicIndexpush(randomNum);
+	pickedAlreadyMyPicIndex.push(randomNum);
 	
     document.getElementById("td23").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image23}`;
     myPixOnPage.push(selected_image23);
@@ -146,9 +146,9 @@ function onPlaySoundButtonClick() {
     //alert('Play Sound Button Submit clicked!');
     solve_start = Date.now();
     play_button_attempt_count = play_button_attempt_count + 1;
-	let randomNum = Math.floor(Math.random() * pickedAlreadyMyPicIndexpush.length());
-    sound_image = pickedAlreadyMyPicIndexpush[randomNum];
-	pickedAlreadyMyPicIndexpush(randomNum);
+	let randomNum = Math.floor(Math.random() * pickedAlreadyMyPicIndex.length());
+    sound_image = pickedAlreadyMyPicIndex[randomNum];
+	
     soundPath = `./media/captcha-sounds/pixabay-com-sound-effects/${sound_image.replace('.jpg', '.mp3')}`;
     console.log(sound_image);
 	console.log(soundPath);
