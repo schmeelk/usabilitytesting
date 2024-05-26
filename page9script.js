@@ -147,7 +147,7 @@ function onPlaySoundButtonClick() {
     solve_start = Date.now();
     play_button_attempt_count = play_button_attempt_count + 1;
 	let randomNum = Math.floor(Math.random() * pickedAlreadyMyPicIndexpush.length());
-    sound_image = pickedAlreadyMyPicIndexpush[rand omNum];
+    sound_image = pickedAlreadyMyPicIndexpush[randomNum];
 	pickedAlreadyMyPicIndexpush(randomNum);
     soundPath = `./media/captcha-sounds/pixabay-com-sound-effects/${sound_image.replace('.jpg', '.mp3')}`;
     console.log(sound_image);
