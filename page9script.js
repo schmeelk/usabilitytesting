@@ -52,32 +52,39 @@ function onImageButtonClick() {
 function choosePic() {
     let randomNum = Math.floor(Math.random() * myPix.length);
     selected_image11 = myPix[randomNum];
-    let button_td11 = document.getElementById("td11").src;
-    button_td11.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/'+${selected_image11}+'" />';
+	
+    //let button_td11 = document.getElementById("td11").src;
+    //button_td11.innerHTML = '<img src="./media/captcha-images/public-domain-www.publicdomainpictures.net/'+${selected_image11}+'" />';
+	document.getElementById("td11image").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/fireworks.jpg`;
 	myPixOnPage.push(selected_image11);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image12 = myPix[randomNum];
+	
     document.getElementById("td12").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image12}`;
 	myPixOnPage.push(selected_image12);
 
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image13 = myPix[randomNum];
+	
     document.getElementById("td13").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image13}`;
 	myPixOnPage.push(selected_image13);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image21 = myPix[randomNum];
+	
     document.getElementById("td21").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image21}`;
 	myPixOnPage.push(selected_image21);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image22 = myPix[randomNum];
+	
     document.getElementById("td22").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image22}`;
 	myPixOnPage.push(selected_image22);
 	
 	randomNum = Math.floor(Math.random() * myPix.length);
     selected_image23 = myPix[randomNum];
+	
     document.getElementById("td23").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image23}`;
     myPixOnPage.push(selected_image23);
 
