@@ -178,7 +178,10 @@ function onSubmitButtonClick() {
     let match = 'Fail';
     let comments = 'n/a';
     //alert('selected value is ' + selected_value);
-
+	console.log('selected value');
+	console.log(selected_value);
+	console.log('sound_image');
+	console.log(sound_image);
     if (sound_image.includes(selected_value)) {
         comments = prompt('Success! Type any comments here');
         match = 'Success';
