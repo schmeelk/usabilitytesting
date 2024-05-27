@@ -39,7 +39,7 @@ var myPixOnPage = new Array();
 var pickedAlreadyMyPicIndex = new Array();
 
 
-function onImageButtonClick(event) {
+function onImageButtonClick(e) {
 	
 	alert("Image Button Click");
     var target = (e.target) ? e.target : e.srcElement;
