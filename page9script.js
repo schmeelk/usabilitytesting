@@ -45,7 +45,7 @@ function onImageButtonClick(e) {
     var target = (e.target) ? e.target : e.srcElement;
 	console.log("Image Button Click")
 	console.log(target)
-    let i = document.getElementById("target.img").src;
+    let i = target.src;
 	console.log(i);
  
 }
