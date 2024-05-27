@@ -138,7 +138,7 @@ function SubmitDetails(match, comments, selectedTextValue) {
     this.submit_time = submit_time;
     this.solve_start_time = solve_start;
     this.solve_end_time = solve_end;
-    this.imageFileName = selected_image;
+    this.imageFileName = selected_value;
     this.soundFileName = soundPath;
     this.textNames = selectedTextValue;
     this.accurate = match;
