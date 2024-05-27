@@ -182,7 +182,7 @@ function onSubmitButtonClick() {
 	console.log(selected_value);
 	console.log('sound_image');
 	console.log(sound_image);
-    if (sound_image.includes(selected_value)) {
+    if (selected_value.includes(sound_image)) {
         comments = prompt('Success! Type any comments here');
         match = 'Success';
     } else {
