@@ -38,22 +38,6 @@ var myPix = new Array(
 var myPixOnPage = new Array();
 var pickedAlreadyMyPicIndex = new Array();
 
-var myPix = new Array(
-    "bird.jpg",
-    "cat.jpg",
-    "fireworks.jpg",
-	"breaking-glass.jpg",
-	"chimes.jpg",
-	"clock.jpg",
-	"dolphin.jpg",
-	"door-knock.jpg",
-	"drum.jpg",
-	"geese.jpg",
-	"phone.jpg",
-	"rain.jpg",
-	"saw.jpg"
-);
-
 
 function onImageButtonClick(event) {
 	
