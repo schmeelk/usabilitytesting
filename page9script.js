@@ -13,6 +13,7 @@ let selected_image23 = 'cat.jpg';
 let sound_image = 'cat.jpg';
 let soundPath = '';
 let soundNotSelected = true;
+let selected_value = 'none.jpg';
 
 
 window.addEventListener('load', choosePic);
@@ -37,11 +38,30 @@ var myPix = new Array(
 var myPixOnPage = new Array();
 var pickedAlreadyMyPicIndex = new Array();
 
+var myPix = new Array(
+    "bird.jpg",
+    "cat.jpg",
+    "fireworks.jpg",
+	"breaking-glass.jpg",
+	"chimes.jpg",
+	"clock.jpg",
+	"dolphin.jpg",
+	"door-knock.jpg",
+	"drum.jpg",
+	"geese.jpg",
+	"phone.jpg",
+	"rain.jpg",
+	"saw.jpg"
+);
 
 
-
-function onImageButtonClick() {
-
+function onImageButtonClick(event) {
+	
+	alert("Image Button Click");
+    var target = (e.target) ? e.target : e.srcElement;
+    let i = document.getElementById("target.img").src;
+	console.log(i);
+ 
 }
 
 const button_td11 = document.querySelector('.td11-button');
@@ -165,18 +185,16 @@ function onPlaySoundButtonClick() {
 }
 
 function onSubmitButtonClick() {
-    //alert('Submit Button clicked!');
+    alert('Submit Button clicked!');
     solve_end = Date.now();
     submit_time = solve_end - solve_start;
     submit_attempt_count = submit_attempt_count + 1;
     console.log(submit_time);
-    let mylist = document.getElementById("choiceList");
-    let selected_value = mylist.options[mylist.selectedIndex].text;
     let match = 'Fail';
     let comments = 'n/a';
     //alert('selected value is ' + selected_value);
 
-    if (selected_image.includes(selected_value)) {
+    if (sound_image.includes(selected_value)) {
         comments = prompt('Success! Type any comments here');
         match = 'Success';
     } else {
@@ -186,7 +204,7 @@ function onSubmitButtonClick() {
     console.log('onSubmitButtonClick after prompt!');
     console.log(comments);
     console.log(listOfSubmitObjects);
-    let sd = new SubmitDetails(match, comments, selected_value);
+    let sd = new SubmitDetails(match, comments, selected_value);  //TOO FIX
     console.log(sd);
     listOfSubmitObjects.push(sd);
     writeUserData(sd);
@@ -200,26 +218,13 @@ function writeUserData() {
 }
 
 
-function submitDetails2JSON(exportData) {
-    //https://stackoverflow.com/questions/2295496/convert-array-to-json
-    //listOfSubmitObjects.forEach((element, index, array) => {
-    //console.log(element.x); // 100, 200, 300
-    //console.log(index); // 0, 1, 2
-    //console.log(array); // same myArray object 3 times
-    //});
-
+function submitDetails2JSON(exportData) {  //TOO FIX
     let json_arr = [];
     for (let i in listOfSubmitObjects) {
         let o = listOfSubmitObjects[i];
         json_arr.push([{
             "Sumit Details Time": o.date, //.toString(),
             "Export Date Information": (new Date()).toString(),
-            //"Day" : o.date.getDay(),
-            //"Month" : o.date.getMonth(),
-            //"Year" : o.date.getYear(),
-            //"Hour" : o.date.getHours(),
-            //"Minute" : o.date.getMinutes(),
-            //"Milliseconds" : o.date.getMilliseconds(),
             "Page": o.page,
             "Submit Time": o.submit_time, //.toString(),
             "Solve Start Time": o.solve_start_time, //.toString(),
@@ -250,19 +255,12 @@ function onCSVButtonsClick(event) {
     console.log(exportData);
     let a = document.createElement("a");
     console.log('here0');
-    //a.href = URL.createObjectURL(new Blob([JSON.stringify(SubmitDetails2JSON(exportData))], {
-    //  type: "text/plain"
-    //}));
     console.log(JSON.stringify(exportData, null, 2));
     a.href = URL.createObjectURL(new Blob([JSON.stringify(submitDetails2JSON(), null, 2)], {
         type: "application/json"
     }));
-    //JSON.parse(JSON.stringify(
-    //let file = new Blob([exportData], {type: 'text/plain'});
-    //let a = event.target.parent;
     console.log('here1');
     let fileDetails = prompt('Please enter any file name details here!');
-    //a.href = URL.createObjectURL(file);
     a.setAttribute("download", fileDetails + 'SubmitExportFile' + Date.now() + '.txt');
     console.log('here2');
     document.body.appendChild(a);
@@ -270,7 +268,6 @@ function onCSVButtonsClick(event) {
     a.click();
     console.log('here3');
     document.body.removeChild(a);
-    //a.download = fileDetails+'SubmitExportFile'+Date.now()+'.txt';
     console.log('here4');
 }
 
