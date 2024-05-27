@@ -45,9 +45,8 @@ function onImageButtonClick(e) {
     var target = (e.target) ? e.target : e.srcElement;
 	console.log("Image Button Click")
 	console.log(target)
-    let i = target.src;
-	console.log(i);
- 
+    selected_value = target.src;
+	console.log(selected_value);
 }
 
 const button_td11 = document.querySelector('.td11-button');
