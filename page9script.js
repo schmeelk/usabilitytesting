@@ -12,6 +12,8 @@ let selected_image22 = 'cat.jpg';
 let selected_image23 = 'cat.jpg';
 let sound_image = 'cat.jpg';
 let soundPath = '';
+let soundNotSelected = true;
+
 
 window.addEventListener('load', choosePic);
 
@@ -140,19 +142,24 @@ function SubmitDetails(match, comments, selectedTextValue) {
     this.usercomments = comments;
 }
 
-
+function selectSound(){
+	
+	if (soundNotSelected){
+		let randomNum = Math.floor(Math.random() * pickedAlreadyMyPicIndex.length);
+		sound_image = myPix[pickedAlreadyMyPicIndex[randomNum]];
+		console.log(sound_image);
+	
+		soundPath = `./media/captcha-sounds/pixabay-com-sound-effects/${sound_image.replace('.jpg', '.mp3')}`;
+		console.log(soundPath);
+		soundNotSelected = false;
+	}
+}
 
 function onPlaySoundButtonClick() {
     //alert('Play Sound Button Submit clicked!');
     solve_start = Date.now();
     play_button_attempt_count = play_button_attempt_count + 1;
-	let randomNum = Math.floor(Math.random() * pickedAlreadyMyPicIndex.length);
-    sound_image = myPix[pickedAlreadyMyPicIndex[randomNum]];
-	console.log(sound_image);
-	
-    soundPath = `./media/captcha-sounds/pixabay-com-sound-effects/${sound_image.replace('.jpg', '.mp3')}`;
-	console.log(soundPath);
-
+	selectSound();
     const audio = new Audio(soundPath);
     audio.play(); //2seconds look at API ... edit media for different lenths  ... study A/B testing 
 }
