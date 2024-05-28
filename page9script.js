@@ -134,7 +134,7 @@ function choosePic() {
 function SubmitDetails(match, comments, selectedTextValue) {
     //date, time, page, submit_time, start_time, end_time, imagefile_name, soundfile_name, attempts
     this.date = Date.now();
-    this.page = 'Page7';
+    this.page = 'Page9';
     this.submit_time = submit_time;
     this.solve_start_time = solve_start;
     this.solve_end_time = solve_end;
