@@ -167,6 +167,9 @@ function onPlaySoundButtonClick() {
 	selectSound();
     const audio = new Audio(soundPath);
     audio.play(); //2seconds look at API ... edit media for different lenths  ... study A/B testing 
+	//TODO: wait some time
+	//audio.pause();
+	//audio.stop();
 }
 
 function onSubmitButtonClick() {
