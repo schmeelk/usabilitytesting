@@ -82,8 +82,15 @@ reCAPTCHA v2
 
 <script LANGUAGE="JavaScript"> 
 
-function onSuccessReCaptcha(event){
+function onSuccessReCaptcha(response){
   alert('Confirming we are in here in Success!');
+  const data = {secret: '6LfGu4QkAAAAABGWbNHGy5VabI04KsVR_bZjnyYG', response};
+  fetch('https://www.google.com/recaptcha/api/siteverify', {
+	method:'POST', 
+	body: JSON.stringify(data)
+  }).then(()=>{
+  alert('Successful response from google!!')});
+  ; 
 }
 
 function onExpiredReCaptcha(event){
