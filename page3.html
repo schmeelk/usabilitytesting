@@ -14,18 +14,6 @@
 <!-- Site navigation menu -->
 <ul class="navbar">
 
-  <li><img src="./ut.jpg" width="120" height="140" alt="UT"></li> 
-  <li><a href="index.html">Home</a></li>
-  <li><a href="page1.html" target="_blank">Page1</a></li> 
-  <li><a href="page2.html" target="_blank">Page2</a></li> 
-  <li><a href="page3.html" target="_blank">Page3</a></li> 
-  <li><a href="page4.html" target="_blank">Page4</a></li> 
-  <li><a href="page5.html" target="_blank">Page5</a></li> 
-  <li><a href="page6.html" target="_blank">Page6</a></li> 
-  <li><a href="page7.html" target="_blank">Page7</a></li> 
-  <li><a href="page8.html" target="_blank">Page8</a></li> 
-  <li><a href="page9.html" target="_blank">Page9</a></li> 
-  <li><a href="page10.html" target="_blank">Page10</a></li> 
 </ul>
 
 
@@ -33,95 +21,19 @@
 
 
 <!-- Main content 
-https://stackoverflow.com/questions/27297067/google-recaptcha-how-to-get-user-response-and-validate-in-the-server-side
+https://www.jotform.com/blog/how-to-add-captcha-to-google-forms/
 -->
-
 <div class="box">
 
-reCAPTCH with verify
-<Work in Progress>
+Google Form with Math Equation to vet any audio settings
 
+<a href="https://docs.google.com/forms/d/e/1FAIpQLServieJ0BEMO5HrH16PhJffqQkMwoMiFRIrBze2KPintaw9hg/viewform?usp=sf_link" target="_blank">Link to Google Form</a>
+
+
+  
 </div>
 
-
-<!--
-if(!empty($_REQUEST))
-{
-        echo '<pre>'; print_r($_REQUEST); die('END');
-        $post = [
-            'secret' => 'Your Secret key',
-            'response' => $_REQUEST['g-recaptcha-response'],
-        ];
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $server_output = curl_exec($ch);
-
-        curl_close ($ch);
-        echo '<pre>'; print_r($server_output); die('ss');
-}
--->
-
-
-<html>
-  <head>
-    <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
-    <script type="text/javascript">
-      var site_key = 'Your Site key';
-      var verifyCallback = function(response) {
-        alert(response);
-      };
-      var widgetId1;
-      var widgetId2;
-      var onloadCallback = function() {
-        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-        widgetId1 = grecaptcha.render('example1', {
-          'sitekey' : site_key,
-          'theme' : 'light'
-        });
-        widgetId2 = grecaptcha.render(document.getElementById('example2'), {
-          'sitekey' : site_key
-        });
-        grecaptcha.render('example3', {
-          'sitekey' : site_key,
-          'callback' : verifyCallback,
-          'theme' : 'dark'
-        });
-      };
-    </script>
-  </head>
-  <body>
-    <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
-    <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
-      <div id="example1"></div>
-      <br>
-      <input type="submit" value="getResponse">
-    </form>
-    <br>
-    <!-- Resets reCAPTCHA widgetId2 upon submit. -->
-    <form action="javascript:grecaptcha.reset(widgetId2);">
-      <div id="example2"></div>
-      <br>
-      <input type="submit" value="reset">
-    </form>
-    <br>
-    <!-- POSTs back to the page's URL upon submit with a g-recaptcha-response POST parameter. -->
-    <form action="?" method="POST">
-      <div id="example3"></div>
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
-  </body>
-</html>
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLServieJ0BEMO5HrH16PhJffqQkMwoMiFRIrBze2KPintaw9hg/viewform?embedded=true" width="640" height="462" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
 <!-- &hellip; gives you ... -->
