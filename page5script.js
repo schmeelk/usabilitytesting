@@ -6,6 +6,7 @@ let play_button_attempt_count = 0;
 let listOfSubmitObjects = [];
 let selected_image = 'cat.jpg';
 let soundPath = '';
+let audio;
 
 window.addEventListener('load', choosePic);
 
@@ -55,12 +56,13 @@ function onPlaySoundButtonClick() {
 	soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/${selected_image.replace('.jpg', '.mp3')}`;
 	console.log(soundPath);
 	
-	const audio = new Audio(soundPath);
+	audio = new Audio(soundPath);
 	audio.play();  //2seconds look at API ... edit media for different lenths  ... study A/B testing 
 }
 
 function onSubmitButtonClick() {
     //alert('Submit Button clicked!');
+	audio.stop();
     solve_end = Date.now(); 
 	submit_time = solve_end - solve_start;
 	submit_attempt_count = submit_attempt_count + 1;
