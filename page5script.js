@@ -61,7 +61,6 @@ function onPlaySoundButtonClick() {
 
 function onSubmitButtonClick() {
     //alert('Submit Button clicked!');
-	audio.stop();
     solve_end = Date.now(); 
 	submit_time = solve_end - solve_start;
 	submit_attempt_count = submit_attempt_count + 1;
