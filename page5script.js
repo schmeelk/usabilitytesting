@@ -6,7 +6,7 @@ let play_button_attempt_count = 0;
 let listOfSubmitObjects = [];
 let selected_image = 'cat.jpg';
 let soundPath = '';
-let audio;
+let audio = new Audio();
 
 window.addEventListener('load', choosePic);
 
