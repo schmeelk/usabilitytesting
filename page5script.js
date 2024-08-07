@@ -63,7 +63,7 @@ function onPlaySoundButtonClick() {
 function onSubmitButtonClick() {
     //alert('Submit Button clicked!');
 	if(audio){
-		audio.stop();
+		audio.pause();
 	}
     solve_end = Date.now(); 
 	submit_time = solve_end - solve_start;
