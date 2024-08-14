@@ -14,7 +14,8 @@ window.addEventListener('load', choosePic);
 var myPix = new Array(
     "bird.jpg",
     "cat.jpg",
-    "fireworks.jpg"
+    "fireworks.jpg", 
+	"dog.jpg"
 );
 
 
