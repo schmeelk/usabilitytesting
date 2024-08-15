@@ -4,7 +4,6 @@ let submit_time = -1;
 let submit_attempt_count = 0;
 let play_button_attempt_count = 0;
 let listOfSubmitObjects = [];
-let selected_image = 'cat.jpg';
 let soundPath = '';
 let audio;
 
@@ -25,8 +24,9 @@ function choosePic() {
 	for (let myPicture of document.getElementsByClassName("myPicture") )
 	{
 		const randomNum = Math.floor(Math.random() * myPix.length);
-		selected_image = myPix[randomNum];
+		const selected_image = myPix[randomNum];
 		myPicture.src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
+		myPicture.setAttribute('data-selected-image', selected_image);
 		myPix.splice(randomNum, 1);
 	}
 
@@ -56,7 +56,7 @@ function SubmitDetails(match, comments, selectedTextValue) {
 
 
 
-function onPlaySoundButtonClick() {
+function onPlaySoundButtonClick(event) {
 	//alert('Play Sound Button Submit clicked!');
     solve_start = Date.now(); 
     play_button_attempt_count = play_button_attempt_count + 1;
@@ -67,7 +67,7 @@ function onPlaySoundButtonClick() {
 	audio.play();  //2seconds look at API ... edit media for different lenths  ... study A/B testing 
 }
 
-function onSubmitButtonClick() {
+function onSubmitButtonClick(event) {
     //alert('Submit Button clicked!');
 	if(audio){
 		audio.pause();
