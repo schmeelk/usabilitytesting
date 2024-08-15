@@ -151,5 +151,7 @@ projects.projectRight.img {
 projects.projectRight.ul.li {
 	text-indent:0em;
 }
-	
+.input_row td 	{
+	border-bottom:1px solid black;
+}
 

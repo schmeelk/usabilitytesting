@@ -20,9 +20,15 @@ var myPix = new Array(
 
 
 function choosePic() {
-    const randomNum = Math.floor(Math.random() * myPix.length);
-    selected_image = myPix[randomNum];
-    document.getElementById("myPicture").src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
+
+    
+	for (let myPicture of document.getElementsByClassName("myPicture") )
+	{
+		const randomNum = Math.floor(Math.random() * myPix.length);
+		selected_image = myPix[randomNum];
+		myPicture.src = `./media/captcha-images/public-domain-www.publicdomainpictures.net/${selected_image}`;
+		myPix.splice(randomNum, 1);
+	}
 
     const playButtons = document.querySelector('.play-button');
     playButtons.addEventListener('click', onPlaySoundButtonClick);
