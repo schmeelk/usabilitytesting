@@ -30,11 +30,15 @@ function choosePic() {
 		myPix.splice(randomNum, 1);
 	}
 
-    const playButtons = document.querySelector('.play-button');
-    playButtons.addEventListener('click', onPlaySoundButtonClick);
-
-    const submitButtons = document.querySelector('.submit-button');
-    submitButtons.addEventListener('click', onSubmitButtonClick);
+    const playButtons = document.querySelectorAll('.play-button');
+	for (let playButton of playButtons){
+		playButton.addEventListener('click', onPlaySoundButtonClick);
+	}
+	
+    const submitButtons = document.querySelectorAll('.submit-button');
+	for (let submitButton of submitButtons){
+		submitButton.addEventListener('click', onSubmitButtonClick);
+	}
 };
 
 
@@ -58,6 +62,10 @@ function SubmitDetails(match, comments, selectedTextValue) {
 
 function onPlaySoundButtonClick(event) {
 	//alert('Play Sound Button Submit clicked!');
+	let containing_row = event.target.closest('tr');
+	let image_row = containing_row.previousElementSibling;
+	let image = image_row.querySelector('img');
+	let selected_image = image.getAttribute('data-selected-image');
     solve_start = Date.now(); 
     play_button_attempt_count = play_button_attempt_count + 1;
 	soundPath = 	`./media/captcha-sounds/pixabay-com-sound-effects/Long/${selected_image.replace('.jpg', '.mp3')}`;
