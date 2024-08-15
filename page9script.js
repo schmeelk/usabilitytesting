@@ -84,14 +84,21 @@ function onSubmitButtonClick(event) {
 	submit_time = solve_end - solve_start;
 	submit_attempt_count = submit_attempt_count + 1;
     console.log(submit_time);
-	let mylist = document.getElementById("choiceList");  
-	let input_from_user = document.getElementById("image_guess_input");
-    let selected_value = mylist.options[mylist.selectedIndex].text;  
+	
+	let containing_row = event.target.closest('tr');
+	let image_row = containing_row.previousElementSibling;
+	let image = image_row.querySelector('img');
+	let selected_image = image.getAttribute('data-selected-image');
+	selected_image = selected_image.replace('.jpg', '');
+	
+	let input_from_user = image_row.querySelector(".image_guess_input");
+    let selected_value = input_from_user.value;
+	
 	let match = 'Fail';
 	let comments = 'n/a';
 	//alert('selected value is ' + selected_value);
 	
-	alert(input_from_user.value);
+	alert(selected_value);
 	input_from_user.value = "";
 	if(selected_image.includes(selected_value)){
 		comments = prompt('Success! Type any comments here '); 
