@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
-  <title>Usability Testing</title>  
   <link rel="stylesheet" href="./ut.css">
-  <meta name="title" content="Usability Testing"/>
+  <meta name="title" content=""/>
   <meta name="Keywords" content=""/>
   <meta name="Description" content="This is the description of my website."/>
   
@@ -24,27 +23,11 @@
 https://www.jotform.com/blog/how-to-add-captcha-to-google-forms/
 -->
 <div class="box">
-Identify what the sound is to authenticate with system.
-
-<!--
-
-Jonathan Holman, Jonathan Lazar, Jinjuan Heidi Feng, and John D'Arcy. 2007. Developing usable CAPTCHAs for blind users. In Proceedings of the 9th international ACM SIGACCESS conference on Computers and accessibility (Assets '07). Association for Computing Machinery, New York, NY, USA, 245–246. DOI:https://doi.org/10.1145/1296843.1296894
 
 
-<br><br>
+To authenticate yourself, identify what the sound is by listening to the sound, typing the matching name, and then submitting.
 
-Jonathan Lazar, Jinjuan Feng, Tim Brooks, Genna Melamed, Brian Wentz, Jon Holman, Abiodun Olalere, and Nnanna Ekedebe. 2012. The SoundsRight CAPTCHA: an improved approach to audio human interaction proofs for blind users. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12). Association for Computing Machinery, New York, NY, USA, 2267–2276. DOI:https://doi.org/10.1145/2207676.2208385
 
-<br><br>
-
-Graig Sauer and Harry Hochheiser and Jinjuan Feng and Jonathan Lazar, (2008) Towards a universally usable captcha}, In Proc. of the 4th Symp. On Usable Privacy and Security (SOUPS ’08).
-
-<br><br>
-
-Graig Sauer, Jonathan Lazar, Harry Hochheiser, and Jinjuan Feng. 2010. Towards A Universally Usable Human Interaction Proof: Evaluation of Task Completion Strategies. ACM Trans. Access. Comput. 2, 4, Article 15 (June 2010), 32 pages. DOI:https://doi.org/10.1145/1786774.1786776
-
--->
-  
 </div>
 
 <!--Images: GitHub\usabilitytesting\media\captcha-images\public-domain-www.publicdomainpictures.net\
@@ -61,7 +44,7 @@ Table:-->
     <img src="./media/captcha-images/public-domain-www-publicdomainpictures-net/cat.jpg" width="200" height="200" id="myPicture">
 	</td>
     <td> 
-	   Please type the name for the sound in text box below.
+	   Please type the name for the sound in text box below.<br>
 		<input type="text" id="image_guess_input" name="image_guess_input">
 	</td>
   </tr>
@@ -70,6 +53,7 @@ Table:-->
           <button class="play-button"> Play Sound</button>
 		  
 		<div style="display:none">
+		Please select from <br>following sound list: <br>bird, cat, fireworks, dog.<br>
 		<select id = "choiceList">  
 		<option> bird </option>  
 		<option> cat </option>  
